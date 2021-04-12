@@ -58,7 +58,7 @@ protoc ammf/protos/*.proto --python_out=.
 ## Training
 ### Dataset
 To train on the [Kitti Object Detection Dataset](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d):
-- Download the data and place it in your home folder at `~/Kitti/object`
+- Download the data (left color images, Velodyne point clouds and other if you need) and place it in your home folder at `~/Kitti/object`
 - Go [here](https://drive.google.com/open?id=1yjCwlSOfAZoPNNqoMtWfEjPCfhRfJB-Z) and download the `train.txt`, `val.txt` and `trainval.txt` splits into `~/Kitti/object`. Also download the `planes` folder into `~/Kitti/object/training`
 
 The folder should look something like the following:
