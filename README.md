@@ -81,6 +81,8 @@ https://drive.google.com/drive/folders/1A-_wfcO_BthlOlGONPXTSVSSX0DcqQPN?usp=sha
 
 ### Run Trainer
 
+python ammf/ammf_training.py --pipeline_config=ammf/configs/pyramid_cars_example.config
+
 Public soon...
 
 
