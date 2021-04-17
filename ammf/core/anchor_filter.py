@@ -1,7 +1,7 @@
 import numpy as np
 
-from wavedata.tools.core.integral_image import IntegralImage
-from wavedata.tools.core.integral_image_2d import IntegralImage2D
+from ammf.utils.wavedata.tools.core.integral_image import IntegralImage
+from ammf.utils.wavedata.tools.core.integral_image_2d import IntegralImage2D
 
 from ammf.core import format_checker
 

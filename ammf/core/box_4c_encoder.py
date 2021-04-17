@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from wavedata.tools.core import geometry_utils
+from ammf.utils.wavedata.tools.core import geometry_utils
 
 from ammf.core import box_3d_encoder
 from ammf.core import format_checker

@@ -4,8 +4,8 @@ import os
 
 from PIL import Image
 
-from wavedata.tools.obj_detection import obj_utils
-from wavedata.tools.obj_detection import evaluation
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import evaluation
 
 from ammf.core import box_3d_encoder, anchor_projector
 from ammf.core import anchor_encoder

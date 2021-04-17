@@ -3,7 +3,7 @@ import sys
 import numpy as np
 from sklearn.cluster import KMeans
 
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 from ammf.builders.dataset_builder import DatasetBuilder
 from ammf.core.label_cluster_utils import LabelClusterUtils

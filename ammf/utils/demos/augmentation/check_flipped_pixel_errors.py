@@ -6,8 +6,8 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-from wavedata.tools.core import calib_utils
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 from ammf.builders.dataset_builder import DatasetBuilder
 from ammf.core import box_3d_projector, box_3d_encoder

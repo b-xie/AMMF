@@ -7,7 +7,7 @@ for anchors rotated at 0 or 90 degrees
 import numpy as np
 import tensorflow as tf
 
-from wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.core import calib_utils
 
 
 def project_to_bev(anchors, bev_extents):

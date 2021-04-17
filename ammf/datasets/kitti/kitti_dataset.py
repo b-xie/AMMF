@@ -8,8 +8,8 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-from wavedata.tools.core import calib_utils
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 from ammf.core import box_3d_encoder
 from ammf.core import constants

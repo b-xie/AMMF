@@ -5,7 +5,8 @@ This runs the DetectionModel trainer.
 
 import argparse
 import os
-
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__),'../'))
 import tensorflow as tf
 
 import ammf

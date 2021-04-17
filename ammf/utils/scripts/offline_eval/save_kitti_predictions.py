@@ -4,7 +4,7 @@ import numpy as np
 import os
 from PIL import Image
 
-from wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.core import calib_utils
 
 import ammf
 from ammf.builders import config_builder_util

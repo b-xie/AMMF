@@ -5,8 +5,8 @@ import numpy.random as random
 
 import matplotlib.image as plt
 
-from wavedata.tools.obj_detection import obj_utils
-from wavedata.tools.visualization import vis_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.visualization import vis_utils
 
 from ammf.builders.dataset_builder import DatasetBuilder
 from ammf.core import box_3d_encoder

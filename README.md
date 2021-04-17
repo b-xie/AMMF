@@ -9,7 +9,7 @@ This repository contains the public release of the Python implementation of our 
 
 
 ## Getting Started
-Implemented and tested on Ubuntu 16.04 with Python 3.5 and Tensorflow 1.3.0.
+Implemented and tested on Ubuntu 20.04 with Python 3.6 and Tensorflow-gpu 1.15.0 with CUDA 10.1, pytorch 1.7.1.
 
 1. Clone this repo
 ```bash
@@ -20,33 +20,30 @@ If you forget to clone the wavedata submodule:
 git submodule update --init --recursive
 ```
 
-2. Install Python dependencies
+2. Create environment
 ```bash
-cd ammf
-pip3 install -r requirements.txt
-pip3 install tensorflow-gpu==1.3.0
+conda create -n ammf python=3.6 pip
+conda activate ammf
+pip install --upgrade pip
 ```
 
-3. Add `ammf (top level)` and `wavedata` to your PYTHONPATH
+3. Install Python dependencies
 ```bash
-# For virtualenvwrapper users
-add2virtualenv .
-add2virtualenv wavedata
-```
-
-```bash
-# For nonvirtualenv users
-export PYTHONPATH=$PYTHONPATH:'/path/to/ammf'
-export PYTHONPATH=$PYTHONPATH:'/path/to/ammf/wavedata'
+cd AMMF/ammf
+pip install -r requirements.txt
+pip install tensorflow-gpu==1.15.0
+pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2
 ```
 
 4. Compile integral image library in wavedata
 ```bash
+cd utils
 sh scripts/install/build_integral_image_lib.bash
 ```
 
 5. ammf uses Protobufs to configure model and training parameters. Before the framework can be used, the protos must be compiled (from top level ammf folder):
 ```bash
+cd ../..
 sh ammf/protos/run_protoc.sh
 ```
 
@@ -73,6 +70,7 @@ Kitti
             planes
             velodyne
         train.txt
+        trainval.txt
         val.txt
 ```
 ### Customized dataset:
@@ -80,21 +78,12 @@ Kitti
 https://drive.google.com/drive/folders/1A-_wfcO_BthlOlGONPXTSVSSX0DcqQPN?usp=sharing
 
 ### Run Trainer
-
-python ammf/ammf_training.py --pipeline_config=ammf/configs/pyramid_cars_example.config
+```
+cd ammf
+python ammf_training.py --pipeline_config=configs/pyramid_cars_example.config
+```
 
 Public soon...
-
-
-### Requirements
-matplotlib
-numpy>=1.13.0
-opencv-python
-pandas
-pillow
-protobuf==3.2.0
-scipy
-sklearn
 
 ## LICENSE
 Copyright (c) 2021 [Bangquan Xie](https://github.com/b-xie), [Zongming Yang], [Liang Yang], [Ruifa Luo], [Jun Lu], [Ailin Wei], [Xiaoxiong Weng] and [Bing Li]

@@ -13,11 +13,11 @@ from ammf.core import model
 from ammf.core import summary_utils
 from ammf.core.anchor_generators import grid_anchor_3d_generator
 from ammf.datasets.kitti import kitti_aug
-from ammf.utils.sparse_pool_utils import sparse_pool_layer
-#from ammf.core.feature_extraction_phase.fusion_vgg_pyramid import FusionVggPyr
+# from ammf.utils.sparse_pool_utils import sparse_pool_layer
+from ammf.core.feature_extraction_phase.lhfma_efpn_fusion import FusionVggPyr
 #bqx:
 from ammf.core.feature_extraction_phase.lhfma_efpn_fusion import FusionVggPyr
-
+from ammf.core.proposal_generation_phase import learned_fusion
 
 class p1Model(model.DetectionModel):
     ##############################
@@ -353,40 +353,40 @@ class p1Model(model.DetectionModel):
 
         #  add a sparse pooling based fusion procudure to see the performance change
        
-        if self._config.p1_config.p1_use_sparse_pooling:
-            use_bn = self._config.p1_config.p1_sparse_pooling_use_batch_norm
-            self.M_tf = tf.SparseTensor(indices=self.placeholders[self.PL_M_IJ],values=self.placeholders[self.PL_M_VAL],
-                          dense_shape=self.placeholders[self.PL_M_SIZE])
-            feature_depths = [self._img_feature_extractor.config.vgg_conv1[1],self._bev_feature_extractor.config.vgg_conv1[1]] 
-            #  the depth of the output feature map (for pooled features bev, img respectively)
-            #only fusion on the bev_map
-            self.bev_feature_maps, self.img_feature_maps = sparse_pool_layer([self.bev_feature_maps,self.img_feature_maps],feature_depths, self.M_tf, 
-                            img_index_flip = self.placeholders[self.PL_IMG_POOL_IJ], bv_index = None, use_bn=use_bn, training=self._is_training)
-            print('WZN: Successfully created SHPL \n')
-            if self._config.p1_config.p1_sparse_pooling_conv_after_fusion:
-                self.bev_feature_maps = slim.conv2d(
-                        self.bev_feature_maps,
-                        feature_depths[0],
-                        [3, 3],
-                        normalizer_fn=slim.batch_norm,
-                        normalizer_params={
-                            'is_training': self._is_training},
-                        scope='pyramid_fusion_pooled_bev')
-                self.img_feature_maps = slim.conv2d(
-                        self.img_feature_maps,
-                        feature_depths[1],
-                        [3, 3],
-                        normalizer_fn=slim.batch_norm,
-                        normalizer_params={
-                            'is_training': self._is_training},
-                        scope='pyramid_fusion_pooled_img')
-                print('WZN: Sucessfully created conv after fusion')
-
-            #  for debug only
-            #self.bev_input_pooled, self.img_input_pooled = sparse_pool_layer([self._bev_preprocessed,self._img_preprocessed],[3,6], self.M_tf, 
-            #               img_index_flip = self.placeholders[self.PL_IMG_POOL_IJ], bv_index = self.placeholders[self.PL_BEV_POOL_IJ], use_bn=use_bn, training=self._is_training)
-        else:
-            print('WZN: Not using sparse pooling right before p1')
+        # if self._config.p1_config.p1_use_sparse_pooling:
+        #     use_bn = self._config.p1_config.p1_sparse_pooling_use_batch_norm
+        #     self.M_tf = tf.SparseTensor(indices=self.placeholders[self.PL_M_IJ],values=self.placeholders[self.PL_M_VAL],
+        #                   dense_shape=self.placeholders[self.PL_M_SIZE])
+        #     feature_depths = [self._img_feature_extractor.config.vgg_conv1[1],self._bev_feature_extractor.config.vgg_conv1[1]]
+        #     #  the depth of the output feature map (for pooled features bev, img respectively)
+        #     #only fusion on the bev_map
+        #     self.bev_feature_maps, self.img_feature_maps = sparse_pool_layer([self.bev_feature_maps,self.img_feature_maps],feature_depths, self.M_tf,
+        #                     img_index_flip = self.placeholders[self.PL_IMG_POOL_IJ], bv_index = None, use_bn=use_bn, training=self._is_training)
+        #     print('WZN: Successfully created SHPL \n')
+        #     if self._config.p1_config.p1_sparse_pooling_conv_after_fusion:
+        #         self.bev_feature_maps = slim.conv2d(
+        #                 self.bev_feature_maps,
+        #                 feature_depths[0],
+        #                 [3, 3],
+        #                 normalizer_fn=slim.batch_norm,
+        #                 normalizer_params={
+        #                     'is_training': self._is_training},
+        #                 scope='pyramid_fusion_pooled_bev')
+        #         self.img_feature_maps = slim.conv2d(
+        #                 self.img_feature_maps,
+        #                 feature_depths[1],
+        #                 [3, 3],
+        #                 normalizer_fn=slim.batch_norm,
+        #                 normalizer_params={
+        #                     'is_training': self._is_training},
+        #                 scope='pyramid_fusion_pooled_img')
+        #         print('WZN: Sucessfully created conv after fusion')
+        #
+        #     #  for debug only
+        #     #self.bev_input_pooled, self.img_input_pooled = sparse_pool_layer([self._bev_preprocessed,self._img_preprocessed],[3,6], self.M_tf,
+        #     #               img_index_flip = self.placeholders[self.PL_IMG_POOL_IJ], bv_index = self.placeholders[self.PL_BEV_POOL_IJ], use_bn=use_bn, training=self._is_training)
+        # else:
+        #     print('WZN: Not using sparse pooling right before p1')
 
 
 
@@ -509,6 +509,7 @@ class p1Model(model.DetectionModel):
                 raise ValueError('Invalid fusion method', self._fusion_method)
 
         # TODO: move this section into an separate AnchorPredictor class
+        p1_fusion_out = rpn_fusion_out
         with tf.variable_scope('anchor_predictor', 'ap', [p1_fusion_out]):
             tensor_in = p1_fusion_out
 

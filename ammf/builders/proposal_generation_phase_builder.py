@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-#from ammf.core.proposal_generation_phase import basic_fc_layers
+from ammf.core.proposal_generation_phase import basic_fc_layers
 from ammf.core.proposal_generation_phase import fusion_fc_layers
 
 

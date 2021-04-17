@@ -4,7 +4,7 @@ import sys
 import numpy as np
 from sklearn.cluster import KMeans
 
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 import ammf
 

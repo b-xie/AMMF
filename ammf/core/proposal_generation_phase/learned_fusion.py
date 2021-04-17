@@ -14,8 +14,7 @@ def AF(bev_proposal_rois, img_proposal_rois):
             nn.Conv1d(img_proposal_rois, img_proposal_rois, 1, 1),
             nn.Sigmoid(),)  # 2xDxL
 
-    obj_fused = gate_p.mul(bev_proposal_rois) + 
-                gate_i.mul(img_proposal_rois)
+    obj_fused = gate_p.mul(bev_proposal_rois) + gate_i.mul(img_proposal_rois)
 
     return obj_fused
 

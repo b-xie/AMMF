@@ -48,7 +48,7 @@ The box_4c format is the following
 import numpy as np
 import tensorflow as tf
 
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 
 def check_object_label_format(input_data):

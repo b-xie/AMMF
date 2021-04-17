@@ -3,7 +3,7 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 from ammf.builders.dataset_builder import DatasetBuilder
 

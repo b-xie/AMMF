@@ -21,11 +21,12 @@ def get_extractor(extractor_config):
     elif extractor_type == 'img_vgg_pyr':
         return ImgVggPyr(extractor_config.img_vgg_pyr)
 
-        # Dep feature extractors
-    elif extractor_type == 'dep_vgg':
-        return DepVgg(extractor_config.dep_vgg)
-    elif extractor_type == 'dep_vgg_pyr':
-        return DepVggPyr(extractor_config.dep_vgg_pyr)
+    #TODO: modify this to make DepVgg work or comment this
+    # Dep feature extractors
+    # elif extractor_type == 'dep_vgg':
+    #     return DepVgg(extractor_config.dep_vgg)
+    # elif extractor_type == 'dep_vgg_pyr':
+    #     return DepVggPyr(extractor_config.dep_vgg_pyr)
     
 
     return ValueError('Invalid feature extractor type', extractor_type)

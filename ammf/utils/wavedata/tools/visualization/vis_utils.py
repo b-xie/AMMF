@@ -4,7 +4,7 @@ import matplotlib.patches as patches
 import numpy as np
 from PIL import Image
 
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 
 def visualization(image_dir, index, flipped=False, display=True,

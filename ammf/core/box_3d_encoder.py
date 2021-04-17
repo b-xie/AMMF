@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 
 import ammf.core.format_checker as fc
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 
 def box_3d_to_object_label(box_3d, obj_type='Car'):

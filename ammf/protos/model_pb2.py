@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,7 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ammf/protos/model.proto',
   package='ammf.protos',
   syntax='proto2',
-  serialized_pb=_b('\n\x17\x61vod/protos/model.proto\x12\x0b\x61vod.protos\x1a\x18\x61vod/protos/layers.proto\"\x88\x04\n\x0bModelConfig\x12\x1e\n\nmodel_name\x18\x01 \x01(\t:\nammf_model\x12(\n\x0f\x63heckpoint_name\x18\x02 \x01(\t:\x0f\x64\x65tection_model\x12.\n\x0cpaths_config\x18\x03 \x01(\x0b\x32\x18.ammf.protos.PathsConfig\x12.\n\x0cinput_config\x18\x04 \x02(\x0b\x32\x18.ammf.protos.InputConfig\x12*\n\np1_config\x18\x05 \x02(\x0b\x32\x16.ammf.protos.p1Config\x12,\n\x0b\x61vod_config\x18\x06 \x02(\x0b\x32\x17.ammf.protos.ammfConfig\x12\x1f\n\x17label_smoothing_epsilon\x18\x07 \x02(\x02\x12\x1b\n\x13\x65xpand_proposals_xz\x18\x08 \x02(\x02\x12\x1f\n\x17path_drop_probabilities\x18\t \x03(\x02\x12\x1c\n\x14train_on_all_samples\x18\n \x02(\x08\x12\x18\n\x10\x65val_all_samples\x18\x0b \x02(\x08\x12\x30\n\rlayers_config\x18\x0c \x02(\x0b\x32\x19.ammf.protos.LayersConfig\x12,\n\x0bloss_config\x18\r \x02(\x0b\x32\x17.ammf.protos.LossConfig\"G\n\x0bPathsConfig\x12\x16\n\x0e\x63heckpoint_dir\x18\x01 \x01(\t\x12\x0e\n\x06logdir\x18\x02 \x01(\t\x12\x10\n\x08pred_dir\x18\x03 \x01(\t\"\x9e\x01\n\x0bInputConfig\x12\x17\n\nbev_dims_h\x18\x01 \x01(\x05:\x03\x37\x30\x30\x12\x17\n\nbev_dims_w\x18\x02 \x01(\x05:\x03\x38\x30\x30\x12\x14\n\tbev_depth\x18\x03 \x01(\x05:\x01\x36\x12\x17\n\nimg_dims_h\x18\x04 \x01(\x05:\x03\x34\x38\x30\x12\x18\n\nimg_dims_w\x18\x05 \x01(\x05:\x04\x31\x35\x39\x30\x12\x14\n\timg_depth\x18\x06 \x01(\x05:\x01\x33\"\x89\x03\n\tp1Config\x12\"\n\x1ap1_proposal_roi_crop_size\x18\x01 \x02(\x05\x12\x19\n\x11p1_fusion_method\x18\x02 \x02(\t\x12\x1a\n\x12p1_train_nms_size\x18\x03 \x02(\x05\x12\x19\n\x11p1_test_nms_size\x18\x04 \x02(\x05\x12\x1a\n\x12p1_nms_iou_thresh\x18\x05 \x02(\x02\x12%\n\x16p1_use_sparse_pooling\x18\x06 \x01(\x08:\x05\x66\x61lse\x12\x30\n!p1_sparse_pooling_use_batch_norm\x18\x07 \x01(\x08:\x05\x66\x61lse\x12\x32\n$p1_sparse_pooling_conv_after_fusion\x18\x08 \x01(\x08:\x04true\x12+\n\x1cp1_sparse_pooling_after_vgg\x18\t \x01(\x08:\x05\x66\x61lse\x12\x30\n!p1_dual_sparse_pooling_after_vgg\x18\n \x01(\x08:\x05\x66\x61lse\"\xa7\x01\n\nammfConfig\x12#\n\x1b\x61vod_proposal_roi_crop_size\x18\x01 \x02(\x05\x12\x1f\n\x17\x61vod_positive_selection\x18\x03 \x02(\t\x12\x15\n\rammf_nms_size\x18\x04 \x02(\x05\x12\x1b\n\x13\x61vod_nms_iou_thresh\x18\x05 \x02(\x02\x12\x1f\n\x17\x61vod_box_representation\x18\x06 \x02(\t\"W\n\nLossConfig\x12\x17\n\x0freg_loss_weight\x18\x01 \x02(\x02\x12\x17\n\x0f\x61ng_loss_weight\x18\x02 \x02(\x02\x12\x17\n\x0f\x63ls_loss_weight\x18\x03 \x02(\x02')
+  serialized_options=None,
+  serialized_pb=_b('\n\x17\x61mmf/protos/model.proto\x12\x0b\x61mmf.protos\x1a\x18\x61mmf/protos/layers.proto\"\x89\x05\n\x0bModelConfig\x12\x1e\n\nmodel_name\x18\x01 \x01(\t:\nammf_model\x12(\n\x0f\x63heckpoint_name\x18\x02 \x01(\t:\x0f\x64\x65tection_model\x12.\n\x0cpaths_config\x18\x03 \x01(\x0b\x32\x18.ammf.protos.PathsConfig\x12.\n\x0cinput_config\x18\x04 \x02(\x0b\x32\x18.ammf.protos.InputConfig\x12*\n\nrpn_config\x18\x05 \x02(\x0b\x32\x16.ammf.protos.RpnConfig\x12)\n\tp1_config\x18\x0e \x02(\x0b\x32\x16.ammf.protos.RpnConfig\x12)\n\tp2_config\x18\x0f \x02(\x0b\x32\x16.ammf.protos.RpnConfig\x12)\n\tp3_config\x18\x10 \x02(\x0b\x32\x16.ammf.protos.RpnConfig\x12,\n\x0b\x61vod_config\x18\x06 \x02(\x0b\x32\x17.ammf.protos.AvodConfig\x12\x1f\n\x17label_smoothing_epsilon\x18\x07 \x02(\x02\x12\x1b\n\x13\x65xpand_proposals_xz\x18\x08 \x02(\x02\x12\x1f\n\x17path_drop_probabilities\x18\t \x03(\x02\x12\x1c\n\x14train_on_all_samples\x18\n \x02(\x08\x12\x18\n\x10\x65val_all_samples\x18\x0b \x02(\x08\x12\x30\n\rlayers_config\x18\x0c \x02(\x0b\x32\x19.ammf.protos.LayersConfig\x12,\n\x0bloss_config\x18\r \x02(\x0b\x32\x17.ammf.protos.LossConfig\"G\n\x0bPathsConfig\x12\x16\n\x0e\x63heckpoint_dir\x18\x01 \x01(\t\x12\x0e\n\x06logdir\x18\x02 \x01(\t\x12\x10\n\x08pred_dir\x18\x03 \x01(\t\"\x9e\x01\n\x0bInputConfig\x12\x17\n\nbev_dims_h\x18\x01 \x01(\x05:\x03\x37\x30\x30\x12\x17\n\nbev_dims_w\x18\x02 \x01(\x05:\x03\x38\x30\x30\x12\x14\n\tbev_depth\x18\x03 \x01(\x05:\x01\x36\x12\x17\n\nimg_dims_h\x18\x04 \x01(\x05:\x03\x34\x38\x30\x12\x18\n\nimg_dims_w\x18\x05 \x01(\x05:\x04\x31\x35\x39\x30\x12\x14\n\timg_depth\x18\x06 \x01(\x05:\x01\x33\"\xff\x04\n\tRpnConfig\x12!\n\x19p1_proposal_roi_crop_size\x18\x01 \x02(\x05\x12\x18\n\x10p1_fusion_method\x18\x02 \x02(\t\x12\x19\n\x11p1_train_nms_size\x18\x03 \x02(\x05\x12\x18\n\x10p1_test_nms_size\x18\x04 \x02(\x05\x12\x19\n\x11p1_nms_iou_thresh\x18\x05 \x02(\x02\x12\x1d\n\x15p1_use_sparse_pooling\x18\x06 \x01(\x08\x12(\n p1_sparse_pooling_use_batch_norm\x18\x07 \x01(\x08\x12+\n#p1_sparse_pooling_conv_after_fusion\x18\x08 \x01(\x08\x12#\n\x1bp1_sparse_pooling_after_vgg\x18\t \x01(\x08\x12(\n p1_dual_sparse_pooling_after_vgg\x18\n \x01(\x08\x12!\n\x19p2_proposal_roi_crop_size\x18\x0b \x01(\x05\x12\x1d\n\x15p2_positive_selection\x18\x0c \x01(\t\x12\x13\n\x0bp2_nms_size\x18\r \x01(\x05\x12\x19\n\x11p2_nms_iou_thresh\x18\x0e \x01(\x02\x12\x1d\n\x15p2_box_representation\x18\x0f \x01(\t\x12!\n\x19p3_proposal_roi_crop_size\x18\x10 \x01(\x05\x12\x1d\n\x15p3_positive_selection\x18\x11 \x01(\t\x12\x13\n\x0bp3_nms_size\x18\x12 \x01(\x05\x12\x19\n\x11p3_nms_iou_thresh\x18\x13 \x01(\x02\x12\x1d\n\x15p3_box_representation\x18\x14 \x01(\t\"\xa7\x01\n\nAvodConfig\x12#\n\x1b\x61vod_proposal_roi_crop_size\x18\x01 \x02(\x05\x12\x1f\n\x17\x61vod_positive_selection\x18\x03 \x02(\t\x12\x15\n\ravod_nms_size\x18\x04 \x02(\x05\x12\x1b\n\x13\x61vod_nms_iou_thresh\x18\x05 \x02(\x02\x12\x1f\n\x17\x61vod_box_representation\x18\x06 \x02(\t\"W\n\nLossConfig\x12\x17\n\x0freg_loss_weight\x18\x01 \x02(\x02\x12\x17\n\x0f\x61ng_loss_weight\x18\x02 \x02(\x02\x12\x17\n\x0f\x63ls_loss_weight\x18\x03 \x02(\x02')
   ,
   dependencies=[ammf_dot_protos_dot_layers__pb2.DESCRIPTOR,])
 
@@ -40,105 +40,126 @@ _MODELCONFIG = _descriptor.Descriptor(
       has_default_value=True, default_value=_b("ammf_model").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='checkpoint_name', full_name='ammf.protos.ModelConfig.checkpoint_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=True, default_value=_b("detection_model").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='paths_config', full_name='ammf.protos.ModelConfig.paths_config', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='input_config', full_name='ammf.protos.ModelConfig.input_config', index=3,
       number=4, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_config', full_name='ammf.protos.ModelConfig.p1_config', index=4,
+      name='rpn_config', full_name='ammf.protos.ModelConfig.rpn_config', index=4,
       number=5, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ammf_config', full_name='ammf.protos.ModelConfig.ammf_config', index=5,
+      name='p1_config', full_name='ammf.protos.ModelConfig.p1_config', index=5,
+      number=14, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_config', full_name='ammf.protos.ModelConfig.p2_config', index=6,
+      number=15, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_config', full_name='ammf.protos.ModelConfig.p3_config', index=7,
+      number=16, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avod_config', full_name='ammf.protos.ModelConfig.avod_config', index=8,
       number=6, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='label_smoothing_epsilon', full_name='ammf.protos.ModelConfig.label_smoothing_epsilon', index=6,
+      name='label_smoothing_epsilon', full_name='ammf.protos.ModelConfig.label_smoothing_epsilon', index=9,
       number=7, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='expand_proposals_xz', full_name='ammf.protos.ModelConfig.expand_proposals_xz', index=7,
+      name='expand_proposals_xz', full_name='ammf.protos.ModelConfig.expand_proposals_xz', index=10,
       number=8, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='path_drop_probabilities', full_name='ammf.protos.ModelConfig.path_drop_probabilities', index=8,
+      name='path_drop_probabilities', full_name='ammf.protos.ModelConfig.path_drop_probabilities', index=11,
       number=9, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='train_on_all_samples', full_name='ammf.protos.ModelConfig.train_on_all_samples', index=9,
+      name='train_on_all_samples', full_name='ammf.protos.ModelConfig.train_on_all_samples', index=12,
       number=10, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='eval_all_samples', full_name='ammf.protos.ModelConfig.eval_all_samples', index=10,
+      name='eval_all_samples', full_name='ammf.protos.ModelConfig.eval_all_samples', index=13,
       number=11, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='layers_config', full_name='ammf.protos.ModelConfig.layers_config', index=11,
+      name='layers_config', full_name='ammf.protos.ModelConfig.layers_config', index=14,
       number=12, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='loss_config', full_name='ammf.protos.ModelConfig.loss_config', index=12,
+      name='loss_config', full_name='ammf.protos.ModelConfig.loss_config', index=15,
       number=13, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
   serialized_start=67,
-  serialized_end=587,
+  serialized_end=716,
 )
 
 
@@ -155,35 +176,35 @@ _PATHSCONFIG = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='logdir', full_name='ammf.protos.PathsConfig.logdir', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='pred_dir', full_name='ammf.protos.PathsConfig.pred_dir', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=589,
-  serialized_end=660,
+  serialized_start=718,
+  serialized_end=789,
 )
 
 
@@ -200,209 +221,279 @@ _INPUTCONFIG = _descriptor.Descriptor(
       has_default_value=True, default_value=700,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='bev_dims_w', full_name='ammf.protos.InputConfig.bev_dims_w', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=800,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='bev_depth', full_name='ammf.protos.InputConfig.bev_depth', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=6,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='img_dims_h', full_name='ammf.protos.InputConfig.img_dims_h', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=480,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='img_dims_w', full_name='ammf.protos.InputConfig.img_dims_w', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=1590,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='img_depth', full_name='ammf.protos.InputConfig.img_depth', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=3,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=663,
-  serialized_end=821,
+  serialized_start=792,
+  serialized_end=950,
 )
 
 
-_p1CONFIG = _descriptor.Descriptor(
-  name='p1Config',
-  full_name='ammf.protos.p1Config',
+_RPNCONFIG = _descriptor.Descriptor(
+  name='RpnConfig',
+  full_name='ammf.protos.RpnConfig',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='p1_proposal_roi_crop_size', full_name='ammf.protos.p1Config.p1_proposal_roi_crop_size', index=0,
+      name='p1_proposal_roi_crop_size', full_name='ammf.protos.RpnConfig.p1_proposal_roi_crop_size', index=0,
       number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_fusion_method', full_name='ammf.protos.p1Config.p1_fusion_method', index=1,
+      name='p1_fusion_method', full_name='ammf.protos.RpnConfig.p1_fusion_method', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_train_nms_size', full_name='ammf.protos.p1Config.p1_train_nms_size', index=2,
+      name='p1_train_nms_size', full_name='ammf.protos.RpnConfig.p1_train_nms_size', index=2,
       number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_test_nms_size', full_name='ammf.protos.p1Config.p1_test_nms_size', index=3,
+      name='p1_test_nms_size', full_name='ammf.protos.RpnConfig.p1_test_nms_size', index=3,
       number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_nms_iou_thresh', full_name='ammf.protos.p1Config.p1_nms_iou_thresh', index=4,
+      name='p1_nms_iou_thresh', full_name='ammf.protos.RpnConfig.p1_nms_iou_thresh', index=4,
       number=5, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_use_sparse_pooling', full_name='ammf.protos.p1Config.p1_use_sparse_pooling', index=5,
+      name='p1_use_sparse_pooling', full_name='ammf.protos.RpnConfig.p1_use_sparse_pooling', index=5,
       number=6, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=False,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_sparse_pooling_use_batch_norm', full_name='ammf.protos.p1Config.p1_sparse_pooling_use_batch_norm', index=6,
+      name='p1_sparse_pooling_use_batch_norm', full_name='ammf.protos.RpnConfig.p1_sparse_pooling_use_batch_norm', index=6,
       number=7, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=False,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_sparse_pooling_conv_after_fusion', full_name='ammf.protos.p1Config.p1_sparse_pooling_conv_after_fusion', index=7,
+      name='p1_sparse_pooling_conv_after_fusion', full_name='ammf.protos.RpnConfig.p1_sparse_pooling_conv_after_fusion', index=7,
       number=8, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=True,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_sparse_pooling_after_vgg', full_name='ammf.protos.p1Config.p1_sparse_pooling_after_vgg', index=8,
+      name='p1_sparse_pooling_after_vgg', full_name='ammf.protos.RpnConfig.p1_sparse_pooling_after_vgg', index=8,
       number=9, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=False,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='p1_dual_sparse_pooling_after_vgg', full_name='ammf.protos.p1Config.p1_dual_sparse_pooling_after_vgg', index=9,
+      name='p1_dual_sparse_pooling_after_vgg', full_name='ammf.protos.RpnConfig.p1_dual_sparse_pooling_after_vgg', index=9,
       number=10, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=False,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_proposal_roi_crop_size', full_name='ammf.protos.RpnConfig.p2_proposal_roi_crop_size', index=10,
+      number=11, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_positive_selection', full_name='ammf.protos.RpnConfig.p2_positive_selection', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_nms_size', full_name='ammf.protos.RpnConfig.p2_nms_size', index=12,
+      number=13, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_nms_iou_thresh', full_name='ammf.protos.RpnConfig.p2_nms_iou_thresh', index=13,
+      number=14, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p2_box_representation', full_name='ammf.protos.RpnConfig.p2_box_representation', index=14,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_proposal_roi_crop_size', full_name='ammf.protos.RpnConfig.p3_proposal_roi_crop_size', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_positive_selection', full_name='ammf.protos.RpnConfig.p3_positive_selection', index=16,
+      number=17, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_nms_size', full_name='ammf.protos.RpnConfig.p3_nms_size', index=17,
+      number=18, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_nms_iou_thresh', full_name='ammf.protos.RpnConfig.p3_nms_iou_thresh', index=18,
+      number=19, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='p3_box_representation', full_name='ammf.protos.RpnConfig.p3_box_representation', index=19,
+      number=20, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=824,
-  serialized_end=1217,
+  serialized_start=953,
+  serialized_end=1592,
 )
 
 
-_ammfCONFIG = _descriptor.Descriptor(
-  name='ammfConfig',
-  full_name='ammf.protos.ammfConfig',
+_AVODCONFIG = _descriptor.Descriptor(
+  name='AvodConfig',
+  full_name='ammf.protos.AvodConfig',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ammf_proposal_roi_crop_size', full_name='ammf.protos.ammfConfig.ammf_proposal_roi_crop_size', index=0,
+      name='avod_proposal_roi_crop_size', full_name='ammf.protos.AvodConfig.avod_proposal_roi_crop_size', index=0,
       number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ammf_positive_selection', full_name='ammf.protos.ammfConfig.ammf_positive_selection', index=1,
+      name='avod_positive_selection', full_name='ammf.protos.AvodConfig.avod_positive_selection', index=1,
       number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ammf_nms_size', full_name='ammf.protos.ammfConfig.ammf_nms_size', index=2,
+      name='avod_nms_size', full_name='ammf.protos.AvodConfig.avod_nms_size', index=2,
       number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ammf_nms_iou_thresh', full_name='ammf.protos.ammfConfig.ammf_nms_iou_thresh', index=3,
+      name='avod_nms_iou_thresh', full_name='ammf.protos.AvodConfig.avod_nms_iou_thresh', index=3,
       number=5, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ammf_box_representation', full_name='ammf.protos.ammfConfig.ammf_box_representation', index=4,
+      name='avod_box_representation', full_name='ammf.protos.AvodConfig.avod_box_representation', index=4,
       number=6, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1220,
-  serialized_end=1387,
+  serialized_start=1595,
+  serialized_end=1762,
 )
 
 
@@ -419,48 +510,51 @@ _LOSSCONFIG = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='ang_loss_weight', full_name='ammf.protos.LossConfig.ang_loss_weight', index=1,
       number=2, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='cls_loss_weight', full_name='ammf.protos.LossConfig.cls_loss_weight', index=2,
       number=3, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1389,
-  serialized_end=1476,
+  serialized_start=1764,
+  serialized_end=1851,
 )
 
 _MODELCONFIG.fields_by_name['paths_config'].message_type = _PATHSCONFIG
 _MODELCONFIG.fields_by_name['input_config'].message_type = _INPUTCONFIG
-_MODELCONFIG.fields_by_name['p1_config'].message_type = _p1CONFIG
-_MODELCONFIG.fields_by_name['ammf_config'].message_type = _ammfCONFIG
+_MODELCONFIG.fields_by_name['rpn_config'].message_type = _RPNCONFIG
+_MODELCONFIG.fields_by_name['p1_config'].message_type = _RPNCONFIG
+_MODELCONFIG.fields_by_name['p2_config'].message_type = _RPNCONFIG
+_MODELCONFIG.fields_by_name['p3_config'].message_type = _RPNCONFIG
+_MODELCONFIG.fields_by_name['avod_config'].message_type = _AVODCONFIG
 _MODELCONFIG.fields_by_name['layers_config'].message_type = ammf_dot_protos_dot_layers__pb2._LAYERSCONFIG
 _MODELCONFIG.fields_by_name['loss_config'].message_type = _LOSSCONFIG
 DESCRIPTOR.message_types_by_name['ModelConfig'] = _MODELCONFIG
 DESCRIPTOR.message_types_by_name['PathsConfig'] = _PATHSCONFIG
 DESCRIPTOR.message_types_by_name['InputConfig'] = _INPUTCONFIG
-DESCRIPTOR.message_types_by_name['p1Config'] = _p1CONFIG
-DESCRIPTOR.message_types_by_name['ammfConfig'] = _ammfCONFIG
+DESCRIPTOR.message_types_by_name['RpnConfig'] = _RPNCONFIG
+DESCRIPTOR.message_types_by_name['AvodConfig'] = _AVODCONFIG
 DESCRIPTOR.message_types_by_name['LossConfig'] = _LOSSCONFIG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -485,19 +579,19 @@ InputConfig = _reflection.GeneratedProtocolMessageType('InputConfig', (_message.
   ))
 _sym_db.RegisterMessage(InputConfig)
 
-p1Config = _reflection.GeneratedProtocolMessageType('p1Config', (_message.Message,), dict(
-  DESCRIPTOR = _p1CONFIG,
+RpnConfig = _reflection.GeneratedProtocolMessageType('RpnConfig', (_message.Message,), dict(
+  DESCRIPTOR = _RPNCONFIG,
   __module__ = 'ammf.protos.model_pb2'
-  # @@protoc_insertion_point(class_scope:ammf.protos.p1Config)
+  # @@protoc_insertion_point(class_scope:ammf.protos.RpnConfig)
   ))
-_sym_db.RegisterMessage(p1Config)
+_sym_db.RegisterMessage(RpnConfig)
 
-ammfConfig = _reflection.GeneratedProtocolMessageType('ammfConfig', (_message.Message,), dict(
-  DESCRIPTOR = _ammfCONFIG,
+AvodConfig = _reflection.GeneratedProtocolMessageType('AvodConfig', (_message.Message,), dict(
+  DESCRIPTOR = _AVODCONFIG,
   __module__ = 'ammf.protos.model_pb2'
-  # @@protoc_insertion_point(class_scope:ammf.protos.ammfConfig)
+  # @@protoc_insertion_point(class_scope:ammf.protos.AvodConfig)
   ))
-_sym_db.RegisterMessage(ammfConfig)
+_sym_db.RegisterMessage(AvodConfig)
 
 LossConfig = _reflection.GeneratedProtocolMessageType('LossConfig', (_message.Message,), dict(
   DESCRIPTOR = _LOSSCONFIG,

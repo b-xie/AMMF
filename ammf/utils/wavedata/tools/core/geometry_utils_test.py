@@ -1,7 +1,7 @@
 import numpy as np
 import unittest
 
-from wavedata.tools.core import geometry_utils
+from ammf.utils.wavedata.tools.core import geometry_utils
 
 
 class GeometryUtilsTest(unittest.TestCase):

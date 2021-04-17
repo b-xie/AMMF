@@ -1,7 +1,7 @@
 import os
 import unittest
 import numpy as np
-from wavedata.tools.obj_detection import evaluation
+from ammf.utils.wavedata.tools.obj_detection import evaluation
 
 ROOTDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
 

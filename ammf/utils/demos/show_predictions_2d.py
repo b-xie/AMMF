@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.patheffects as patheffects
 
-from wavedata.tools.core import calib_utils
-from wavedata.tools.obj_detection import obj_utils
-from wavedata.tools.obj_detection import evaluation
-from wavedata.tools.visualization import vis_utils
+from ammf.utils.wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.obj_detection import evaluation
+from ammf.utils.wavedata.tools.visualization import vis_utils
 
 import ammf
 from ammf.builders.dataset_builder import DatasetBuilder

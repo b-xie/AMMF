@@ -5,8 +5,8 @@ import matplotlib.patches as patches
 import numpy as np
 from PIL import Image
 
-from wavedata.tools.core import calib_utils
-from wavedata.tools.visualization import vis_utils
+from ammf.utils.wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.visualization import vis_utils
 
 from ammf.builders.dataset_builder import DatasetBuilder
 from ammf.core import anchor_projector

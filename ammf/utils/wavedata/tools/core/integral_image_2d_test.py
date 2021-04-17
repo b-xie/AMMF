@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from wavedata.tools.core.integral_image_2d import IntegralImage2D
+from ammf.utils.wavedata.tools.core.integral_image_2d import IntegralImage2D
 
 
 class IntegralImage2DTest(unittest.TestCase):

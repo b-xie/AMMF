@@ -2,7 +2,7 @@ import os
 import unittest
 import numpy as np
 
-from wavedata.tools.core.voxel_grid import VoxelGrid
+from ammf.utils.wavedata.tools.core.voxel_grid import VoxelGrid
 
 # ROOT_DIR at wavedata
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))

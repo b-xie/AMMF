@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -23,7 +22,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ammf/protos/pipeline.proto',
   package='ammf.protos',
   syntax='proto2',
-  serialized_pb=_b('\n\x1a\x61vod/protos/pipeline.proto\x12\x0b\x61vod.protos\x1a\x17\x61vod/protos/model.proto\x1a\x17\x61vod/protos/train.proto\x1a\x16\x61vod/protos/eval.proto\x1a\x1f\x61vod/protos/kitti_dataset.proto\"\xde\x01\n\x15NetworkPipelineConfig\x12.\n\x0cmodel_config\x18\x01 \x01(\x0b\x32\x18.ammf.protos.ModelConfig\x12.\n\x0ctrain_config\x18\x02 \x01(\x0b\x32\x18.ammf.protos.TrainConfig\x12,\n\x0b\x65val_config\x18\x03 \x01(\x0b\x32\x17.ammf.protos.EvalConfig\x12\x37\n\x0e\x64\x61taset_config\x18\x04 \x01(\x0b\x32\x1f.ammf.protos.KittiDatasetConfig')
+  serialized_options=None,
+  serialized_pb=_b('\n\x1a\x61mmf/protos/pipeline.proto\x12\x0b\x61mmf.protos\x1a\x17\x61mmf/protos/model.proto\x1a\x17\x61mmf/protos/train.proto\x1a\x16\x61mmf/protos/eval.proto\x1a\x1f\x61mmf/protos/kitti_dataset.proto\"\xde\x01\n\x15NetworkPipelineConfig\x12.\n\x0cmodel_config\x18\x01 \x01(\x0b\x32\x18.ammf.protos.ModelConfig\x12.\n\x0ctrain_config\x18\x02 \x01(\x0b\x32\x18.ammf.protos.TrainConfig\x12,\n\x0b\x65val_config\x18\x03 \x01(\x0b\x32\x17.ammf.protos.EvalConfig\x12\x37\n\x0e\x64\x61taset_config\x18\x04 \x01(\x0b\x32\x1f.ammf.protos.KittiDatasetConfig')
   ,
   dependencies=[ammf_dot_protos_dot_model__pb2.DESCRIPTOR,ammf_dot_protos_dot_train__pb2.DESCRIPTOR,ammf_dot_protos_dot_eval__pb2.DESCRIPTOR,ammf_dot_protos_dot_kitti__dataset__pb2.DESCRIPTOR,])
 
@@ -43,35 +43,35 @@ _NETWORKPIPELINECONFIG = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='train_config', full_name='ammf.protos.NetworkPipelineConfig.train_config', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='eval_config', full_name='ammf.protos.NetworkPipelineConfig.eval_config', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='dataset_config', full_name='ammf.protos.NetworkPipelineConfig.dataset_config', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],

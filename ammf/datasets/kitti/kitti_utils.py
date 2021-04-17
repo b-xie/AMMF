@@ -2,9 +2,9 @@ import os
 
 import numpy as np
 
-from wavedata.tools.core.voxel_grid_2d import VoxelGrid2D
-from wavedata.tools.core.voxel_grid import VoxelGrid
-from wavedata.tools.obj_detection import obj_utils
+from ammf.utils.wavedata.tools.core.voxel_grid_2d import VoxelGrid2D
+from ammf.utils.wavedata.tools.core.voxel_grid import VoxelGrid
+from ammf.utils.wavedata.tools.obj_detection import obj_utils
 
 from ammf.builders import bev_generator_builder
 from ammf.core.label_cluster_utils import LabelClusterUtils

@@ -2,7 +2,7 @@ import os
 
 import numpy as np
 
-from wavedata.tools.core import calib_utils
+from ammf.utils.wavedata.tools.core import calib_utils
 
 
 class ObjectLabel:

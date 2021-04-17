@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from ammf.utils.sparse_pool_utils import sparse_pool_layer
+# from ammf.utils.sparse_pool_utils import sparse_pool_layer
 
 slim = tf.contrib.slim
 
@@ -177,7 +177,10 @@ class FusionVggPyr:
             vgg_config = self.config_img
             scope_mid_name = 'img_vgg_pyr'
         else:
-            error('Unknown name of single sensor backbone')
+            # error('Unknown name of single sensor backbone')
+            print('Unknown name of single sensor backbone')
+            exit(-1)
+
 
         with slim.arg_scope(self.vgg_arg_scope(
                 weight_decay=vgg_config.l2_weight_decay)):
@@ -196,7 +199,9 @@ class FusionVggPyr:
                         padded = inputs
                     
                     else:
-                        error('Unknown name of single sensor backbone')
+                        # error('Unknown name of single sensor backbone')
+                        print('Unknown name of single sensor backbone')
+                        exit(-1)
 
                     # Encoder
                     conv1 = slim.repeat(padded,
@@ -261,7 +266,10 @@ class FusionVggPyr:
             vgg_config = self.config_img
             scope_mid_name = 'img_vgg_pyr'
         else:
-            error('Unknown name of single sensor backbone')
+            # error('Unknown name of single sensor backbone')
+            print('Unknown name of single sensor backbone')
+            exit(-1)
+
 
         conv1 = convs[0]
         conv2 = convs[1]
@@ -367,7 +375,7 @@ class FusionVggPyr:
                             'is_training': is_training},
                         scope='pyramid_fusion2_3')
 
-                    pyramid_fusion2 = slim.conv2d(
+                    pyramid_fusion_2 = slim.conv2d(
                         pyramid_fusion2_3,
                         vgg_config.vgg_conv2[1]/4,
                         [1, 1],
@@ -430,7 +438,9 @@ class FusionVggPyr:
                     elif backbone_name == 'img':
                         sliced = pyramid_fusion1
                     else:
-                        error('Unknown name of single sensor backbone')
+                        # error('Unknown name of single sensor backbone')
+                        print('Unknown name of single sensor backbone')
+                        exit(-1)
 
                 feature_maps_out = sliced
 
