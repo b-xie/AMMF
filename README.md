@@ -78,10 +78,7 @@ Kitti
 https://drive.google.com/drive/folders/1A-_wfcO_BthlOlGONPXTSVSSX0DcqQPN?usp=sharing
 
 ### Run Trainer
-```
-cd ammf
-python ammf_training.py --pipeline_config=configs/pyramid_cars_example.config
-```
+
 
 Public soon...
 
